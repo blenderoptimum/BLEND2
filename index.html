@@ -1,90 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Spline Fullscreen Background</title>
+    </head>
+<body>
+
+    <div class="content">
+        <section class="panel">
+            <h1>Panel 1</h1>
+            <p>Content for panel 1.  This can be a longer section of text, images, or other elements.</p>
+            </section>
+
+        <section class="panel">
+            <h1>Panel 2</h1>
+            <p>Content for panel 2.</p>
+            </section>
+
+        <section class="panel">
+            <h1>Panel 3</h1>
+            <p>Content for panel 3.</p>
+            </section>
+
+        <section class="panel">
+            <h1>Panel 4</h1>
+            <p>Content for panel 4.</p>
+            </section>
+
+        <section class="panel">
+            <h1>Panel 5</h1>
+            <p>Content for panel 5.</p>
+            </section>
+
+    </div>
+
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        .background {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100vw;
-            height: 100vh;
-            z-index: -1;
-        }
-
-        iframe {
-            width: 100%;
-            height: 100%;
-            border: none;
-        }
-
-        .header {
-            position: sticky; /* Make the header sticky */
-            top: 0;
-            left: 0;
-            width: 100%;
-            background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background for header */
-            padding: 10px 20px;
-            z-index: 2; /* Ensure header is above Spline and content */
-        }
-
-        .header img {
-            width: 150px;
-            height: auto;
-        }
+        /* ... (previous CSS styles) ... */
 
         .content {
-            position: relative;
-            z-index: 1;
-            background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background for content */
-            color: white;
-            padding: 50px;
-            font-family: Arial, sans-serif;
-            margin-top: 70px; /* Adjusted margin to account for sticky header */
-            backdrop-filter: blur(5px); /* Add a blur to make the text more readable */
+            /* ... (previous content styles) ... */
+            display: flex; /* Use flexbox for horizontal panels */
+            flex-direction: column; /* Stack panels vertically */
+            align-items: center; /* Center panels horizontally */
+            padding: 50px; /* Adjust padding as needed */
+            min-height: 100vh; /* Ensure content takes up full viewport height */
+        }
+        .panel {
+            width: 80%; /* Adjust panel width as needed */
+            max-width: 900px; /* Set maximum width */
+            margin-bottom: 50px; /* Spacing between panels */
+            padding: 20px;
+            text-align: center; /* Center text within panels */
+        }
+        .panel:last-of-type {
+            margin-bottom: 0px; /* remove margin from last panel */
+        }
+        /* Style the panels as you like (e.g., background color, borders) */
+        .panel h1 {
+            margin-bottom: 20px;
         }
 
         @media (max-width: 768px) {
-            .header img {
-                width: 100px;
+            .panel {
+                width: 95%; /* Panels take up more width on smaller screens */
             }
-
-            .content {
-                padding: 20px;
-                font-size: 14px;
-                margin-top: 60px; /* Adjust margin for smaller screens */
-            }
-        }
-
-        html {
-            scroll-behavior: smooth;
         }
     </style>
-</head>
-<body>
-
-    <div class="background">
-        <iframe src="https://my.spline.design/breakapartcubewhilescrolling-4715bc581be32a926f2790cdd81992ab/"
-                allowfullscreen>
-        </iframe>
-    </div>
-
-    <div class="header">
-        <img src="https://raw.githubusercontent.com/blenderoptimum/BLEND2/main/blendclear.png" alt="Blender Logo">
-    </div>
-
-    <div class="content">
-        <h1>Scroll Down to See Content</h1>
-        <p>The background will stay in place while you scroll.</p>
-    </div>
 
 </body>
 </html>
