@@ -27,13 +27,13 @@
         }
 
         .header {
-            position: sticky;
+            position: sticky; /* Make the header sticky */
             top: 0;
             left: 0;
             width: 100%;
-            background-color: rgba(0, 0, 0, 0.5);
+            background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background for header */
             padding: 10px 20px;
-            z-index: 2;
+            z-index: 2; /* Ensure header is above Spline and content */
         }
 
         .header img {
@@ -44,26 +44,12 @@
         .content {
             position: relative;
             z-index: 1;
-            background-color: rgba(0, 0, 0, 0.5);
+            background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background for content */
             color: white;
             padding: 50px;
             font-family: Arial, sans-serif;
-            margin-top: 70px;
-            backdrop-filter: blur(5px);
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-
-        .panel {
-            padding: 50px;
-            margin-bottom: 20px;
-            width: 80%;
-            max-width: 960px;
-        }
-
-        .panel:nth-child(even) {
-            background-color: rgba(0, 0, 0, 0.6);
+            margin-top: 70px; /* Adjusted margin to account for sticky header */
+            backdrop-filter: blur(5px); /* Add a blur to make the text more readable */
         }
 
         @media (max-width: 768px) {
@@ -74,12 +60,7 @@
             .content {
                 padding: 20px;
                 font-size: 14px;
-                margin-top: 60px;
-                align-items: flex-start;
-            }
-
-            .panel {
-                width: 95%;
+                margin-top: 60px; /* Adjust margin for smaller screens */
             }
         }
 
@@ -101,30 +82,8 @@
     </div>
 
     <div class="content">
-        <section class="panel">
-            <h1>Panel 1</h1>
-            <p>Content for panel 1. You can put any HTML content here.</p>
-        </section>
-
-        <section class="panel">
-            <h1>Panel 2</h1>
-            <p>Content for panel 2. This is a separate section.</p>
-        </section>
-
-        <section class="panel">
-            <h1>Panel 3</h1>
-            <p>Content for panel 3. Each panel can have different content.</p>
-        </section>
-
-        <section class="panel">
-            <h1>Panel 4</h1>
-            <p>Content for panel 4.</p>
-        </section>
-
-        <section class="panel">
-            <h1>Panel 5</h1>
-            <p>Content for panel 5.</p>
-        </section>
+        <h1>Scroll Down to See Content</h1>
+        <p>The background will stay in place while you scroll.</p>
     </div>
 
 </body>
