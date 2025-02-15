@@ -3,88 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Spline Fullscreen Background</title>
+    <title>Embedded Spline Page</title>
     <style>
-        * {
+        /* Optional CSS to make the iframe fill the entire screen */
+        html, body {
             margin: 0;
             padding: 0;
-            box-sizing: border-box;
+            height: 100%;
         }
-
-        .background {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100vw;
-            height: 100vh;
-            z-index: -1;
-        }
-
         iframe {
             width: 100%;
             height: 100%;
             border: none;
         }
-
-        .header {
-            position: sticky; /* Make the header sticky */
-            top: 0;
-            left: 0;
-            width: 100%;
-            background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background for header */
-            padding: 10px 20px;
-            z-index: 2; /* Ensure header is above Spline and content */
-        }
-
-        .header img {
-            width: 150px;
-            height: auto;
-        }
-
-        .content {
-            position: relative;
-            z-index: 1;
-            background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background for content */
-            color: white;
-            padding: 50px;
-            font-family: Arial, sans-serif;
-            margin-top: 70px; /* Adjusted margin to account for sticky header */
-            backdrop-filter: blur(5px); /* Add a blur to make the text more readable */
-        }
-
-        @media (max-width: 768px) {
-            .header img {
-                width: 100px;
-            }
-
-            .content {
-                padding: 20px;
-                font-size: 14px;
-                margin-top: 60px; /* Adjust margin for smaller screens */
-            }
-        }
-
-        html {
-            scroll-behavior: smooth;
-        }
     </style>
 </head>
 <body>
-
-    <div class="background">
-        <iframe src="https://my.spline.design/breakapartcubewhilescrolling-4715bc581be32a926f2790cdd81992ab/"
-                allowfullscreen>
-        </iframe>
-    </div>
-
-    <div class="header">
-        <img src="https://raw.githubusercontent.com/blenderoptimum/BLEND2/main/blendclear.png" alt="Blender Logo">
-    </div>
-
-    <div class="content">
-        <h1>Scroll Down to See Content</h1>
-        <p>The background will stay in place while you scroll.</p>
-    </div>
-
+    <iframe src="https://my.spline.design/blueprintlandingpage-3571f28e775a5a6ebf0e3d2762f491b5/" frameborder="0"></iframe>
 </body>
 </html>
