@@ -11,7 +11,6 @@
             box-sizing: border-box;
         }
 
-        /* Full-screen Spline Background */
         .background {
             position: fixed;
             top: 0;
@@ -27,46 +26,61 @@
             border: none;
         }
 
-        /* Header Style */
         .header {
-            position: absolute;
-            top: 20px;
-            left: 20px;
-            z-index: 2;
+            position: sticky; /* Make the header sticky */
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background for header */
+            padding: 10px 20px;
+            z-index: 2; /* Ensure header is above Spline and content */
         }
 
         .header img {
-            width: 150px; /* Adjust size */
+            width: 150px;
             height: auto;
         }
 
-        /* Content Layer */
         .content {
             position: relative;
             z-index: 1;
+            background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background for content */
             color: white;
-            text-align: center;
             padding: 50px;
             font-family: Arial, sans-serif;
-            margin-top: 100px;
+            margin-top: 70px; /* Adjusted margin to account for sticky header */
+            backdrop-filter: blur(5px); /* Add a blur to make the text more readable */
+        }
+
+        @media (max-width: 768px) {
+            .header img {
+                width: 100px;
+            }
+
+            .content {
+                padding: 20px;
+                font-size: 14px;
+                margin-top: 60px; /* Adjust margin for smaller screens */
+            }
+        }
+
+        html {
+            scroll-behavior: smooth;
         }
     </style>
 </head>
 <body>
 
-    <!-- Full-screen Spline Embed -->
     <div class="background">
         <iframe src="https://my.spline.design/breakapartcubewhilescrolling-4715bc581be32a926f2790cdd81992ab/"
-            allowfullscreen>
+                allowfullscreen>
         </iframe>
     </div>
 
-    <!-- Header with Custom Logo -->
     <div class="header">
-        <img src="blanderclear.png" alt="Your Logo">
+        <img src="https://raw.githubusercontent.com/blenderoptimum/BLEND2/main/blendclear.png" alt="Blender Logo">
     </div>
 
-    <!-- Page Content -->
     <div class="content">
         <h1>Scroll Down to See Content</h1>
         <p>The background will stay in place while you scroll.</p>
