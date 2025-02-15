@@ -27,6 +27,19 @@
             border: none;
         }
 
+        /* Header Style */
+        .header {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            z-index: 2; /* Puts the logo above other content */
+        }
+
+        .header img {
+            width: 150px; /* Adjust logo size */
+            height: auto;
+        }
+
         /* Content Layer */
         .content {
             position: relative;
@@ -35,6 +48,7 @@
             text-align: center;
             padding: 50px;
             font-family: Arial, sans-serif;
+            margin-top: 100px; /* Adds space below the header */
         }
     </style>
 </head>
@@ -45,6 +59,11 @@
         <iframe src="https://my.spline.design/breakapartcubewhilescrolling-4715bc581be32a926f2790cdd81992ab/"
             allowfullscreen>
         </iframe>
+    </div>
+
+    <!-- Header with Custom Logo -->
+    <div class="header">
+        <img src="blanderclear.png" alt="Your Logo">
     </div>
 
     <!-- Page Content -->
