@@ -3,24 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Spline Floating Box</title>
+    <title>Spline Fullscreen Background</title>
     <style>
-        body {
-            height: 200vh; /* Makes the page scrollable */
+        * {
             margin: 0;
-            font-family: Arial, sans-serif;
+            padding: 0;
+            box-sizing: border-box;
         }
 
-        .floating-box {
+        /* Full-screen Spline Background */
+        .background {
             position: fixed;
-            bottom: 20px;
-            right: 20px;
-            width: 200px;
-            height: 200px;
-            border-radius: 15px;
-            overflow: hidden;
-            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
-            background: white;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            z-index: -1; /* Puts it behind content */
         }
 
         iframe {
@@ -29,28 +27,34 @@
             border: none;
         }
 
-        /* Optional: Text content to test scrolling */
+        /* Content Layer */
         .content {
-            padding: 20px;
-            font-size: 18px;
+            position: relative;
+            z-index: 1;
+            color: white;
+            text-align: center;
+            padding: 50px;
+            font-family: Arial, sans-serif;
         }
     </style>
 </head>
 <body>
 
+    <!-- Full-screen Spline Embed -->
+    <div class="background">
+        <iframe src="https://my.spline.design/breakapartcubewhilescrolling-4715bc581be32a926f2790cdd81992ab/"
+            allowfullscreen>
+        </iframe>
+    </div>
+
+    <!-- Page Content -->
     <div class="content">
-        <h1>Scroll Down to See the Effect</h1>
-        <p>Keep scrolling and watch the 3D model react!</p>
-        <p>...</p>
+        <h1>Scroll Down to See Content</h1>
+        <p>The background will stay in place while you scroll.</p>
         <p>...</p>
         <p>More content here...</p>
         <p>Keep scrolling!</p>
-    </div>
-
-    <!-- Floating Spline Box -->
-    <div class="floating-box">
-        <iframe src="https://my.spline.design/breakapartcubewhilescrolling-4715bc581be32a926f2790cdd81992ab/" 
-            allowfullscreen></iframe>
+        <p>...</p>
     </div>
 
 </body>
